@@ -15,7 +15,7 @@ db = redis.Redis(
 
 app = FastAPI()
 
-URL = f"http://{settings.publisher_url}:{settings.publisher_port}/"
+URL = f"http://{settings.beer_details_api_url}:{settings.beer_details_api_port}/"
 
 
 async def request(session):

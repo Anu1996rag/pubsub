@@ -7,6 +7,10 @@ class Settings(BaseSettings):
 
     redis_channel: str = Field(..., env="REDIS_CHANNEL")
 
+    # local api creds
+    beer_details_api_url: str = Field(..., env="BEER_DETAILS_API_URL")
+    beer_details_api_port: str = Field(..., env="BEER_DETAILS_API_PORT")
+
     # publisher creds
     publisher_url: str = Field(..., env="PUBLISHER_URL")
     publisher_port: str = Field(..., env="PUBLISHER_PORT")
@@ -21,5 +25,6 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = '.env'
+
 
 settings = Settings()
